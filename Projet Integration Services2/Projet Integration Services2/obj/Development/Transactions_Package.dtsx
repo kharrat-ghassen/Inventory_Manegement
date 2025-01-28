@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="LAPTOP-1BTVBV88\achra"
+  DTS:CreatorComputerName="LAPTOP-1BTVBV88"
+  DTS:CreationDate="1/28/2025 10:32:10 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{7283D595-31FF-4DC2-974F-95772BEB6F14}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Transactions_Package"
+  DTS:DTSID="{EEF1A1E6-4922-4101-B6B9-2720665D134E}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats]"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats"
+      DTS:DTSID="{2976F7B6-86D4-41D0-B398-5F0AD6618DCB}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\achra\OneDrive\Bureau\SQL DATABASE\Nouveau dossier (3)\Authentification.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pays"
+              DTS:DTSID="{77A77B55-D7A9-40E2-86A1-2F2BB26928BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ville"
+              DTS:DTSID="{1C31FA22-5E43-4C51-BC85-31612BDE957D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom"
+              DTS:DTSID="{3FB78561-C426-4160-9E6A-0261D3511F2A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{9641BFCE-1F15-408A-B2A8-82B135AA483B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Hash"
+              DTS:DTSID="{FD2A89AD-B4F2-4529-B2DC-ED393879ECD5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+      DTS:ObjectName="Gestionnaire de connexions de fichiers plats 1"
+      DTS:DTSID="{11ED2C43-9451-4B86-8744-00FD452F0443}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\achra\OneDrive\Bureau\SQL DATABASE\Nouveau dossier (3)\0_a.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{B29BD1CB-A611-480E-B7D1-F77F536D0B27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product"
+              DTS:DTSID="{72112EFE-5F9E-41DE-858F-6007F63F93B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quantity(kg)"
+              DTS:DTSID="{AA7961E1-7632-4D3C-A0CB-FD6470DF6777}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Provider"
+              DTS:DTSID="{489E9666-1172-49EA-A178-4B1342DAF2AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="worker"
+              DTS:DTSID="{6815CF30-F45E-4EE8-B551-07FF39F2034D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="304"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time "
+              DTS:DTSID="{E297BF28-0278-4C82-B9C9-31265AA8E3D7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-1BTVBV88.Gestion De Stock]"
+      DTS:ObjectName="LAPTOP-1BTVBV88.Gestion De Stock"
+      DTS:DTSID="{736EC527-E8C8-4FFC-B7C6-09FD432D980D}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-1BTVBV88;Initial Catalog=Gestion De Stock;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tâche d'exécution de requêtes SQL"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tâche d'exécution de requêtes SQL"
+      DTS:DTSID="{F37C1116-3889-4035-B423-547E846CE305}"
+      DTS:Description="Tâche d'exécution de requêtes SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{736EC527-E8C8-4FFC-B7C6-09FD432D980D}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[Transactions Table]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tâche de flux de données"
+      DTS:ExecutableType="{5918251B-2970-45A4-AB5F-01C3C588FE5A}"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tâche de flux de données"
+      DTS:DTSID="{91FDA1B8-14EF-4F61-8FD7-9F6227E03776}"
+      DTS:Description="Tâche de flux de données"
+      DTS:CreationName="{5918251B-2970-45A4-AB5F-01C3C588FE5A}">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tâche de flux de données\Destination OLE DB"
+              name="Destination OLE DB"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destination OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande. Une valeur égale à 0 indique un délai d'expiration infini.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes.">[dbo].[Transactions Table]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données de caractères.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide. Ne s'applique que si le chargement rapide est activé.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données. Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données. Ne s'applique que si le chargement rapide est activé.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-1BTVBV88.Gestion De Stock]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-1BTVBV88.Gestion De Stock]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  name="Entrée de destination OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="IgnoreFailure">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ID]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ID]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      cachedName="ID"
+                      cachedDataType="i8" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Product]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Product]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Product]"
+                      cachedName="Product"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Quantity(kg)]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Quantity(kg)]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Quantity(kg)]"
+                      cachedName="Quantity(kg)"
+                      cachedDataType="r4" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Provider]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Provider]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Provider]"
+                      cachedName="Provider"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[worker]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[worker]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[worker]"
+                      cachedName="worker"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedCodepage="1252" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Time ]"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Time ]"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Time ]"
+                      cachedName="Time "
+                      cachedDataType="dbTimeStamp2" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ID]"
+                      name="ID"
+                      dataType="i8" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Product]"
+                      name="Product"
+                      dataType="str"
+                      length="255"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Quantity(kg)]"
+                      name="Quantity(kg)"
+                      dataType="r4" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Provider]"
+                      name="Provider"
+                      dataType="str"
+                      length="255"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[worker]"
+                      name="worker"
+                      dataType="str"
+                      length="255"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Time ]"
+                      name="Time "
+                      dataType="dbTimeStamp2"
+                      scale="7" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  name="Sortie d'erreur de destination OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Source du fichier plat"
+              name="Source du fichier plat"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              description="Source du fichier plat"
+              localeId="1036"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="RetainNulls"
+                  dataType="System.Boolean"
+                  description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL.">true</property>
+                <property
+                  name="FileNameColumnName"
+                  dataType="System.String"
+                  description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Source du fichier plat.Connections[FlatFileConnection]"
+                  name="FlatFileConnection"
+                  connectionManagerID="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestionnaire de connexions de fichiers plats 1]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
+                  name="Sortie de source de fichier plat">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ID]"
+                      name="ID"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[ID]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      truncationRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ID]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Product]"
+                      name="Product"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Product]"
+                      length="255"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      truncationRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Product]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Quantity(kg)]"
+                      name="Quantity(kg)"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Quantity(kg)]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      truncationRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Quantity(kg)]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Provider]"
+                      name="Provider"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Provider]"
+                      length="255"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      truncationRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Provider]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[worker]"
+                      name="worker"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[worker]"
+                      length="255"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      truncationRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[worker]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire.">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Time ]"
+                      name="Time "
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].Columns[Time ]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      truncationRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Time ]">
+                      <properties>
+                        <property
+                          name="FastParse"
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres.">false</property>
+                        <property
+                          name="UseBinaryFormat"
+                          dataType="System.Boolean"
+                          description="Indique si les données sont au format binaire.">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[ID]"
+                      name="ID"
+                      dataType="i8" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Product]"
+                      name="Product"
+                      dataType="str"
+                      length="255"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Quantity(kg)]"
+                      name="Quantity(kg)"
+                      dataType="r4" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Provider]"
+                      name="Provider"
+                      dataType="str"
+                      length="255"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[worker]"
+                      name="worker"
+                      dataType="str"
+                      length="255"
+                      codePage="1252" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat].ExternalColumns[Time ]"
+                      name="Time "
+                      dataType="dbTimeStamp2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat]"
+                  name="Sortie d'erreur de source de fichier plat"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      name="Colonne de sortie d'erreur de source de fichier plat"
+                      description="Colonne de sortie d'erreur de source de fichier plat"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                      dataType="text"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat]"
+              name="Sortie de source de fichier plat"
+              startId="Package\Tâche de flux de données\Source du fichier plat.Outputs[Sortie de source de fichier plat]"
+              endId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Contrainte]"
+      DTS:From="Package\Tâche d'exécution de requêtes SQL"
+      DTS:To="Package\Tâche de flux de données"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Contrainte"
+      DTS:DTSID="{6612FA80-1C32-402F-8C89-FA7C87453887}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="sql11">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Tâche de flux de données"
+          TopLeft="103.5,125.5" />
+        <NodeLayout
+          Size="244,42"
+          Id="Package\Tâche d'exécution de requêtes SQL"
+          TopLeft="73.5,35.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Contrainte]"
+          TopLeft="199.25,77.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48"
+              Start="0,0"
+              End="0,40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tâche de flux de données">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Tâche de flux de données\Source du fichier plat"
+          TopLeft="102.5,12.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Tâche de flux de données\Destination OLE DB"
+          TopLeft="101.5,110.5" />
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de source de fichier plat]"
+          TopLeft="189,54.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de flux de données\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
